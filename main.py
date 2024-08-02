@@ -1,5 +1,5 @@
 #made by green_milk
-with tab3:
+    with tab3:
         st.title("모나원 1주년을 축하합니다!")
         st.info("모나원은 지금? : 가지 3 단계")
         img = Image.open('monawon.png')
@@ -25,19 +25,20 @@ with tab3:
             months = total_days // 30  # 간단히 30일을 한 달로 가정
             days = total_days % 30
             st.info(f"{months}개월 {days}일이 지났습니다.")
-
-            if months >= 16 and g >= 600 and d >= 1000 and b >= 2000 :
+            days = total_days / 7
+            if days >= 16 and g >= 600 and d >= 1000 and b >= 2000 :
                 st.success("당신은 너구리 입니다!")
-            elif months >= 12 and g >= 300 and d >= 500 and b >= 1000:
+                
+            elif days >= 12 and g >= 300 and d >= 500 and b >= 1000:
                 st.success("당신은 라쿤 입니다!")
 
-            elif months >= 8 and g >= 100 and d >= 300 and b >= 500:
+            elif days >= 8 and g >= 100 and d >= 300 and b >= 500:
                 st.success("당신은 거위 입니다!")
 
-            elif months >= 4 and g >= 50 and d >= 100 and b >= 300:
+            elif days >= 4 and g >= 50 and d >= 100 and b >= 300:
                 st.success("당신은 뱁새 입니다!")
 
-            elif months >= 0 and g >= 0 and d >= 1 and b >= 0:
+            elif days >= 0 and g >= 0 and d >= 1 and b >= 0:
                 st.success("당신은 미어켓 입니다!")
 
             else:
